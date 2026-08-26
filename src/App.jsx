@@ -1,37 +1,19 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
 import './App.css'
-import Paragrafo from './Paragrafo'
-import CaixaTexto from './CaixaTexto'
-
+import { ThemeProvider } from './contexts/ThemeContext'
+import ThemeToggleButton from './components/ThemeToggleButton'
 
 function App() {
-  const [count, setCount] = useState(0)
 
-  return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
+    return (
+        <ThemeProvider>
         <div>
-          <h1>Get started</h1>
-        </div>
+            <nav>Menu de Navegação</nav>
+            <ThemeToggleButton>
+                
+            </ThemeToggleButton>
 
-          <Paragrafo nome="Fulano" />
-          <Paragrafo nome="Beltrano" />
-
-          <CaixaTexto />
-      
-      </section>
-
-      <div className="ticks"></div>
-    </>
-  )
+        </div>        
+      </ThemeProvider>
+    )
 }
-
 export default App
