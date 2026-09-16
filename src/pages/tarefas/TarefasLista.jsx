@@ -1,9 +1,10 @@
+// TarefasLista.jsx
+
 import TarefasItem from "./TarefasItem";
 
 const TarefasLista = ({ tarefas, onEditTarefa, onDeleteTarefa }) => {
     return (
         <ul>
-            {/* .map() executa a função para cada item dentro do objeto */}
             {tarefas.map((tarefa) => (
                 <TarefasItem key={tarefa.id}
                     tarefa={tarefa}
@@ -11,7 +12,7 @@ const TarefasLista = ({ tarefas, onEditTarefa, onDeleteTarefa }) => {
                     onDeleteTarefa={onDeleteTarefa} />
             ))}
         </ul>
-    )
+    );
 }
 
 export default TarefasLista;
